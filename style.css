@@ -59,7 +59,6 @@ h1, h2, h3, h4, h5, h6 {
   --color-grey: hsl(30, 10%, 34%);          /* Wenge Brown */
   --radius: 10px;
   --fs-small: 11px;
-  --fs-medium: 15px;
 }
 
 @font-face {
@@ -139,7 +138,6 @@ li {
 .section-title {
   font-family: var(--font-serif-main);
   color: var(--color-accent);
-  font-size: var(--fs-medium);
   margin: 7px 0 14px;
   font-weight: normal;
 }
