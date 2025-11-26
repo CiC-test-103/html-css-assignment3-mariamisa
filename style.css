@@ -47,35 +47,62 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /** Your CSS Below **/
+:root {
+  --font-serif-main: 'YoungSerif-Regular';
+  --font-sans-main: 'Outfit';
+  --color-bg-main: hsl(30, 54%, 90%);       /* Eggshell */
+  --color-white:white;
+  --color-border: hsl(30, 18%, 87%);        /* Light Grey */
+  --color-accent: hsl(14, 45%, 36%);        /* Nutmeg */
+  --color-purple: hsl(332, 51%, 32%);       /* Dark Raspberry */
+  --color-dark: hsl(24, 5%, 18%);           /* Dark Charcoal */
+  --color-grey: hsl(30, 10%, 34%);          /* Wenge Brown */
+  --radius: 10px;
+  --fs-small: 11px;
+  --fs-medium: 15px;
+}
+
 @font-face {
   font-family: 'YoungSerif-Regular';
-  /* Use this exact name here */
-  src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf') format('woff2');
-  /* Add optional descriptors */
+  src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Outfit';
+  src: url('./assets/fonts/outfit/Outfit-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
+/* GLOBAL */
 body {
-  background-color: rgb(247, 235, 223);
+  background-color: var(--color-bg-main);
+  font-family: var(--font-sans-main);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
 }
 
-.container {
-  background-color: white;
-  width: 510px;
-  margin: 50px auto;
-  padding: 20px;
-  padding-bottom: 15px;
-  font-family: sans-serif;
+span {
+  color: var(--color-grey);
 }
 
+/* LIST ITEMS */
+li {
+  font-size: var(--fs-small);
+  padding: 3px 7px;
+}
+
+/* UTILITIES */
 .radius {
-  border-radius: 10px;
+  border-radius: var(--radius);
 }
 
 .grey {
-  color: rgb(102, 101, 101);
+  color: var(--color-grey);
 }
 
 .bold {
@@ -86,97 +113,107 @@ body {
   font-weight: normal;
 }
 
-.border_bottom {
-  border-bottom: 1px solid rgb(238, 231, 231);
+.border-bottom {
+  border-bottom: 1px solid var(--color-border);
   padding: 15px 0;
 }
 
-li {
-  font-size: 11px;
-  font-family: sans-serif;
+/* LAYOUT */
+.container {
+  background-color: var(--color-white);
+  width: 510px;
+  margin: 80px auto;
+  padding: 20px 20px 15px;
+  border-radius: var(--radius);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
 }
 
+/* TITLES & TEXT */
 .header {
-  font-weight: 550;
-  margin: 20px 0 5px;
-  color: #444;
-  font-family: 'YoungSerif-Regular';
+  font-weight: 600;
+  margin: 20px 0 8px;
+  color: var(--color-dark);
+  font-family: var(--font-serif-main);
+}
+
+.section-title {
+  font-family: var(--font-serif-main);
+  color: var(--color-accent);
+  font-size: var(--fs-medium);
+  margin: 7px 0 14px;
+  font-weight: normal;
 }
 
 .description {
-  font-size: 11px;
+  font-size: var(--fs-small);
   margin-bottom: 5px;
+  color: var(--color-grey);
 }
 
-.prep_time {
-  background-color: #faf2fa;
+/* PREP TIME */
+.prep-time {
+  background-color: #faf2fa; /* If needed, make a new variable */
   padding: 15px 0;
   margin-top: 15px;
 }
 
-.prep_time h5 {
-  color: #800080;
+.prep-time h5 {
+  color: var(--color-purple);
   padding: 0px 20px 5px;
+  margin: 0;
+  font-size: 13px;
 }
 
-li {
-  padding: 3px 7px;
-}
-
-
-span {
-  color: rgb(81, 79, 79);
-}
-
-.section_title {
-  font-family: 'YoungSerif-Regular';
-  color: #9a5608;
-  font-weight: normal;
-  margin-bottom: 5px;
-
-}
-
-.ingredients_section {
+/* INGREDIENTS */
+.ingredients-section {
   padding-top: 15px;
 }
 
-.remove_padding {
+.remove-padding {
   padding: 0px 20px;
 }
 
-.table_section {
+/* NUTRITION TABLE */
+.table-section {
   margin-top: 15px;
-
 }
 
-.table_section p {
+.table-section p {
   margin-top: 10px;
 }
 
-.nutrition_table {
+.nutrition-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 11px;
+  font-size: var(--fs-small);
 }
 
-.nutrition_table th,
-.nutrition_table td {
-  font-weight: normal;
+.nutrition-table th,
+.nutrition-table td {
   padding: 8px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
-  /* Adds a light bottom border to every cell */
+  border-bottom: 1px solid var(--color-border);
+  font-weight: normal;
 }
 
-.nutrition_table tr:last-child th,
-.nutrition_table tr:last-child td {
+.nutrition-table tr:last-child th,
+.nutrition-table tr:last-child td {
   border-bottom: none;
 }
 
-.nutrition_table td {
+.nutrition-table td {
   font-weight: bold;
-  color: #9a5608;
+  color: var(--color-accent);
 }
+
+/* RESPONSIVE */
+@media (max-width: 550px) {
+  .container {
+    width: 92%;
+    padding: 15px;
+  }
+}
+
 
 
 /** Attribution CSS **/
