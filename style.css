@@ -47,6 +47,137 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /** Your CSS Below **/
+@font-face {
+  font-family: 'YoungSerif-Regular';
+  /* Use this exact name here */
+  src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf') format('woff2');
+  /* Add optional descriptors */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-color: rgb(247, 235, 223);
+}
+
+.container {
+  background-color: white;
+  width: 510px;
+  margin: 50px auto;
+  padding: 20px;
+  padding-bottom: 15px;
+  font-family: sans-serif;
+}
+
+.radius {
+  border-radius: 10px;
+}
+
+.grey {
+  color: rgb(102, 101, 101);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+.border_bottom {
+  border-bottom: 1px solid rgb(238, 231, 231);
+  padding: 15px 0;
+}
+
+li {
+  font-size: 11px;
+  font-family: sans-serif;
+}
+
+.header {
+  font-weight: 550;
+  margin: 20px 0 5px;
+  color: #444;
+  font-family: 'YoungSerif-Regular';
+}
+
+.description {
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.prep_time {
+  background-color: #faf2fa;
+  padding: 15px 0;
+  margin-top: 15px;
+}
+
+.prep_time h5 {
+  color: #800080;
+  padding: 0px 20px 5px;
+}
+
+li {
+  padding: 3px 7px;
+}
+
+
+span {
+  color: rgb(81, 79, 79);
+}
+
+.section_title {
+  font-family: 'YoungSerif-Regular';
+  color: #9a5608;
+  font-weight: normal;
+  margin-bottom: 5px;
+
+}
+
+.ingredients_section {
+  padding-top: 15px;
+}
+
+.remove_padding {
+  padding: 0px 20px;
+}
+
+.table_section {
+  margin-top: 15px;
+
+}
+
+.table_section p {
+  margin-top: 10px;
+}
+
+.nutrition_table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.nutrition_table th,
+.nutrition_table td {
+  font-weight: normal;
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  /* Adds a light bottom border to every cell */
+}
+
+.nutrition_table tr:last-child th,
+.nutrition_table tr:last-child td {
+  border-bottom: none;
+}
+
+.nutrition_table td {
+  font-weight: bold;
+  color: #9a5608;
+}
+
 
 /** Attribution CSS **/
 .attribution { font-size: 11px; text-align: center; }
